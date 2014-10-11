@@ -50,7 +50,17 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Control\MapControlExtensionsTests.cs" />
+    <Compile Include="GeoDatabase\FeatureClassExtensionsTests.cs" />
+    <Compile Include="Geometry\EnvelopeExtensionsTests.cs" />
+    <Compile Include="Geometry\GeometryExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleArcObject\SimpleArcObject.csproj">
+      <Project>{9011887C-CC5E-4E9F-AFEF-35F14313E79C}</Project>
+      <Name>SimpleArcObject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

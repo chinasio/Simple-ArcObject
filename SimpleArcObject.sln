@@ -1,8 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleArcObject", "SimpleArcObject\SimpleArcObject.csproj", "{9011887C-CC5E-4E9F-AFEF-35F14313E79C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleArcObject.Test", "SimpleArcObject.Test\SimpleArcObject.Test.csproj", "{CE0308E3-14F6-4F37-B895-8CE4744D5772}"
