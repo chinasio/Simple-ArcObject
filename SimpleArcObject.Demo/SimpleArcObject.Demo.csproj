@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{928915EC-EFC1-4039-90F1-81A66286BF94}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleArcObject.Demo</RootNamespace>
+    <AssemblyName>SimpleArcObject.Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GlobeCore, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\FrmNavigation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNavigation.Designer.cs">
+      <DependentUpon>FrmNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FrmNavigation.resx">
+      <DependentUpon>FrmNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="data\AirportsAndGolf\airportgolf.mxd" />
+    <None Include="data\AirportsAndGolf\Find Golf Courses.tbx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000001.freelist" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000001.gdbindexes" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000001.gdbtable" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000001.gdbtablx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000001.TablesByName.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000002.gdbtable" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000002.gdbtablx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000003.gdbindexes" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000003.gdbtable" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000003.gdbtablx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000004.CatItemsByPhysicalName.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000004.CatItemsByType.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000004.FDO_UUID.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000004.freelist" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000004.gdbindexes" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000004.gdbtable" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000004.gdbtablx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000004.spx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000005.CatRelsByDestinationID.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000005.CatRelsByOriginID.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000005.CatRelsByType.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000005.FDO_UUID.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000005.freelist" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000005.gdbindexes" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000005.gdbtable" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000005.gdbtablx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000006.CatRelTypesByBackwardLabel.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000006.CatRelTypesByDestItemTypeID.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000006.CatRelTypesByForwardLabel.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000006.CatRelTypesByName.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000006.CatRelTypesByOriginItemTypeID.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000006.CatRelTypesByUUID.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000006.freelist" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000006.gdbindexes" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000006.gdbtable" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000006.gdbtablx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000007.CatItemTypesByName.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000007.CatItemTypesByParentTypeID.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000007.CatItemTypesByUUID.atx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000007.gdbindexes" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000007.gdbtable" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000007.gdbtablx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000009.gdbindexes" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000009.gdbtable" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000009.gdbtablx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a00000009.spx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a0000000a.gdbindexes" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a0000000a.gdbtable" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a0000000a.gdbtablx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\a0000000a.spx" />
+    <None Include="data\AirportsAndGolf\golf.gdb\gdb" />
+    <None Include="data\AirportsAndGolf\golf.gdb\timestamps" />
+    <None Include="data\BloomfieldTownship\BloomfieldTownship.mxd" />
+    <None Include="data\BloomfieldTownship\Hillshade.img" />
+    <None Include="data\BloomfieldTownship\Hillshade.rrd" />
+    <None Include="data\BloomfieldTownship\RoadCenterline.dbf" />
+    <None Include="data\BloomfieldTownship\RoadCenterline.prj" />
+    <None Include="data\BloomfieldTownship\RoadCenterline.sbn" />
+    <None Include="data\BloomfieldTownship\RoadCenterline.sbx" />
+    <None Include="data\BloomfieldTownship\RoadCenterline.shp" />
+    <None Include="data\BloomfieldTownship\RoadCenterline.shx" />
+    <None Include="data\BloomfieldTownship\RoadCenterline_Locator.loc" />
+    <None Include="data\BloomfieldTownship\RoadCenterline_Locator.lox" />
+    <None Include="data\BloomfieldTownship\SchoolTaxDistrict.dbf" />
+    <None Include="data\BloomfieldTownship\SchoolTaxDistrict.prj" />
+    <None Include="data\BloomfieldTownship\SchoolTaxDistrict.sbn" />
+    <None Include="data\BloomfieldTownship\SchoolTaxDistrict.sbx" />
+    <None Include="data\BloomfieldTownship\SchoolTaxDistrict.shp" />
+    <None Include="data\BloomfieldTownship\SchoolTaxDistrict.shx" />
+    <None Include="data\BloomfieldTownship\SiteAddress.dbf" />
+    <None Include="data\BloomfieldTownship\SiteAddress.prj" />
+    <None Include="data\BloomfieldTownship\SiteAddress.sbn" />
+    <None Include="data\BloomfieldTownship\SiteAddress.sbx" />
+    <None Include="data\BloomfieldTownship\SiteAddress.shp" />
+    <None Include="data\BloomfieldTownship\SiteAddress.shx" />
+    <None Include="data\California\California.gdb\a00000001.freelist" />
+    <None Include="data\California\California.gdb\a00000001.gdbindexes" />
+    <None Include="data\California\California.gdb\a00000001.gdbtable" />
+    <None Include="data\California\California.gdb\a00000001.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000001.TablesByName.atx" />
+    <None Include="data\California\California.gdb\a00000002.gdbtable" />
+    <None Include="data\California\California.gdb\a00000002.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000003.gdbindexes" />
+    <None Include="data\California\California.gdb\a00000003.gdbtable" />
+    <None Include="data\California\California.gdb\a00000003.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000004.gdbtable" />
+    <None Include="data\California\California.gdb\a00000004.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000005.gdbindexes" />
+    <None Include="data\California\California.gdb\a00000005.gdbtable" />
+    <None Include="data\California\California.gdb\a00000005.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000006.gdbindexes" />
+    <None Include="data\California\California.gdb\a00000006.gdbtable" />
+    <None Include="data\California\California.gdb\a00000006.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000007.gdbtable" />
+    <None Include="data\California\California.gdb\a00000007.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000008.gdbtable" />
+    <None Include="data\California\California.gdb\a00000008.gdbtablx" />
+    <None Include="data\California\California.gdb\a0000001c.freelist" />
+    <None Include="data\California\California.gdb\a0000001c.gdbindexes" />
+    <None Include="data\California\California.gdb\a0000001c.gdbtable" />
+    <None Include="data\California\California.gdb\a0000001c.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000026.gdbindexes" />
+    <None Include="data\California\California.gdb\a00000026.gdbtable" />
+    <None Include="data\California\California.gdb\a00000026.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000026.spx" />
+    <None Include="data\California\California.gdb\a00000027.gdbindexes" />
+    <None Include="data\California\California.gdb\a00000027.gdbtable" />
+    <None Include="data\California\California.gdb\a00000027.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000027.spx" />
+    <None Include="data\California\California.gdb\a00000028.gdbindexes" />
+    <None Include="data\California\California.gdb\a00000028.gdbtable" />
+    <None Include="data\California\California.gdb\a00000028.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000028.spx" />
+    <None Include="data\California\California.gdb\a00000029.gdbindexes" />
+    <None Include="data\California\California.gdb\a00000029.gdbtable" />
+    <None Include="data\California\California.gdb\a00000029.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000029.spx" />
+    <None Include="data\California\California.gdb\a0000002a.gdbindexes" />
+    <None Include="data\California\California.gdb\a0000002a.gdbtable" />
+    <None Include="data\California\California.gdb\a0000002a.gdbtablx" />
+    <None Include="data\California\California.gdb\a0000002a.spx" />
+    <None Include="data\California\California.gdb\a0000002b.gdbindexes" />
+    <None Include="data\California\California.gdb\a0000002b.gdbtable" />
+    <None Include="data\California\California.gdb\a0000002b.gdbtablx" />
+    <None Include="data\California\California.gdb\a0000002b.spx" />
+    <None Include="data\California\California.gdb\a0000002c.gdbindexes" />
+    <None Include="data\California\California.gdb\a0000002c.gdbtable" />
+    <None Include="data\California\California.gdb\a0000002c.gdbtablx" />
+    <None Include="data\California\California.gdb\a0000002c.spx" />
+    <None Include="data\California\California.gdb\a0000002d.gdbindexes" />
+    <None Include="data\California\California.gdb\a0000002d.gdbtable" />
+    <None Include="data\California\California.gdb\a0000002d.gdbtablx" />
+    <None Include="data\California\California.gdb\a0000002d.spx" />
+    <None Include="data\California\California.gdb\a0000002e.freelist" />
+    <None Include="data\California\California.gdb\a0000002e.gdbindexes" />
+    <None Include="data\California\California.gdb\a0000002e.gdbtable" />
+    <None Include="data\California\California.gdb\a0000002e.gdbtablx" />
+    <None Include="data\California\California.gdb\a0000002e.spx" />
+    <None Include="data\California\California.gdb\a0000002f.gdbindexes" />
+    <None Include="data\California\California.gdb\a0000002f.gdbtable" />
+    <None Include="data\California\California.gdb\a0000002f.gdbtablx" />
+    <None Include="data\California\California.gdb\a0000002f.spx" />
+    <None Include="data\California\California.gdb\a00000030.gdbindexes" />
+    <None Include="data\California\California.gdb\a00000030.gdbtable" />
+    <None Include="data\California\California.gdb\a00000030.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000030.spx" />
+    <None Include="data\California\California.gdb\a00000031.gdbindexes" />
+    <None Include="data\California\California.gdb\a00000031.gdbtable" />
+    <None Include="data\California\California.gdb\a00000031.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000031.spx" />
+    <None Include="data\California\California.gdb\a00000032.CatItemsByPhysicalName.atx" />
+    <None Include="data\California\California.gdb\a00000032.CatItemsByType.atx" />
+    <None Include="data\California\California.gdb\a00000032.FDO_UUID.atx" />
+    <None Include="data\California\California.gdb\a00000032.gdbindexes" />
+    <None Include="data\California\California.gdb\a00000032.gdbtable" />
+    <None Include="data\California\California.gdb\a00000032.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000032.spx" />
+    <None Include="data\California\California.gdb\a00000033.CatItemTypesByName.atx" />
+    <None Include="data\California\California.gdb\a00000033.CatItemTypesByParentTypeID.atx" />
+    <None Include="data\California\California.gdb\a00000033.CatItemTypesByUUID.atx" />
+    <None Include="data\California\California.gdb\a00000033.gdbindexes" />
+    <None Include="data\California\California.gdb\a00000033.gdbtable" />
+    <None Include="data\California\California.gdb\a00000033.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000034.CatRelsByDestinationID.atx" />
+    <None Include="data\California\California.gdb\a00000034.CatRelsByOriginID.atx" />
+    <None Include="data\California\California.gdb\a00000034.CatRelsByType.atx" />
+    <None Include="data\California\California.gdb\a00000034.FDO_UUID.atx" />
+    <None Include="data\California\California.gdb\a00000034.gdbindexes" />
+    <None Include="data\California\California.gdb\a00000034.gdbtable" />
+    <None Include="data\California\California.gdb\a00000034.gdbtablx" />
+    <None Include="data\California\California.gdb\a00000035.CatRelTypesByBackwardLabel.atx" />
+    <None Include="data\California\California.gdb\a00000035.CatRelTypesByDestItemTypeID.atx" />
+    <None Include="data\California\California.gdb\a00000035.CatRelTypesByForwardLabel.atx" />
+    <None Include="data\California\California.gdb\a00000035.CatRelTypesByName.atx" />
+    <None Include="data\California\California.gdb\a00000035.CatRelTypesByOriginItemTypeID.atx" />
+    <None Include="data\California\California.gdb\a00000035.CatRelTypesByUUID.atx" />
+    <None Include="data\California\California.gdb\a00000035.freelist" />
+    <None Include="data\California\California.gdb\a00000035.gdbindexes" />
+    <None Include="data\California\California.gdb\a00000035.gdbtable" />
+    <None Include="data\California\California.gdb\a00000035.gdbtablx" />
+    <None Include="data\California\California.gdb\gdb" />
+    <None Include="data\California\California.gdb\timestamps" />
+    <None Include="data\California\California.msd" />
+    <None Include="data\California\California.mxd" />
+    <None Include="data\California\CaliforniaProjected.mxd" />
+    <None Include="data\California\Report Templates\CA_Counties_Populations_Race.rlf" />
+    <None Include="data\California\Report Templates\CA_Counties_Population_Change.rlf" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000001.freelist" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000001.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000001.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000001.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000001.TablesByName.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000002.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000002.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000003.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000003.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000003.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000026.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000026.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000026.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000026.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000029.freelist" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000029.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000029.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000029.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000029.LocatorsLocNameUnique_uc1.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002a.freelist" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002a.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002a.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002a.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002b.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002b.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002b.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002b.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002f.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002f.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002f.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000030.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000030.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000030.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000031.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000031.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000031.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000031.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000032.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000032.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000032.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000032.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000033.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000033.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000033.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000033.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000034.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000034.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000034.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000034.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000035.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000035.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000035.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000035.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000036.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000036.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000036.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000036.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000037.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000037.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000037.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000037.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000038.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000038.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000038.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000038.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000039.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000039.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000039.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000039.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003a.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003a.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003a.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003a.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003d.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003d.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003d.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003d.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003e.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003e.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003e.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003e.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003f.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003f.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003f.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003f.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000040.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000040.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000040.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000040.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000041.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000041.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000041.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000041.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000042.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000042.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000042.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000042.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.EdgeFCID.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.EdgeFID.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.Sequence.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.SignpostID.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000044.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000044.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000044.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.CatItemsByPhysicalName.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.CatItemsByType.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.FDO_UUID.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.freelist" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.CatItemTypesByName.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.CatItemTypesByParentTypeID.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.CatItemTypesByUUID.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.CatRelsByDestinationID.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.CatRelsByOriginID.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.CatRelsByType.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.FDO_UUID.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.freelist" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByBackwardLabel.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByDestItemTypeID.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByForwardLabel.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByName.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByOriginItemTypeID.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByUUID.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000049.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000049.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000049.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004a.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004a.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004a.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004a.N_1_Desc_0.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004a.N_1_Desc_1.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004b.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004b.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004b.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004b.N_1_Topology_0.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004c.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004c.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004c.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004c.N_1_JunctionWeight_0.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004d.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004d.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004d.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004d.N_1_EdgeWeight_0.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004e.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004e.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004e.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004e.N_1_TurnWeight_0.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004f.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004f.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004f.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004f.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000050.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000050.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000050.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000050.GDB_51_IsRetired.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000050.spx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.GDB_52_ClassID.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.GDB_52_OID.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.GDB_52_UpdateType.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000052.gdbindexes" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000052.gdbtable" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000052.gdbtablx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000052.SanFrancis2f9e64b9.atx" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\gdb" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\timestamps" />
+    <None Include="data\SanFrancisco\SanFrancisco.mxd" />
+    <None Include="data\Time\BasicHurricanes.mxd" />
+    <None Include="data\Time\ProjectData.gdb\a00000001.gdbindexes" />
+    <None Include="data\Time\ProjectData.gdb\a00000001.gdbtable" />
+    <None Include="data\Time\ProjectData.gdb\a00000001.gdbtablx" />
+    <None Include="data\Time\ProjectData.gdb\a00000001.TablesByName.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000002.gdbtable" />
+    <None Include="data\Time\ProjectData.gdb\a00000002.gdbtablx" />
+    <None Include="data\Time\ProjectData.gdb\a00000003.gdbindexes" />
+    <None Include="data\Time\ProjectData.gdb\a00000003.gdbtable" />
+    <None Include="data\Time\ProjectData.gdb\a00000003.gdbtablx" />
+    <None Include="data\Time\ProjectData.gdb\a00000004.CatItemsByPhysicalName.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000004.CatItemsByType.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000004.FDO_UUID.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000004.freelist" />
+    <None Include="data\Time\ProjectData.gdb\a00000004.gdbindexes" />
+    <None Include="data\Time\ProjectData.gdb\a00000004.gdbtable" />
+    <None Include="data\Time\ProjectData.gdb\a00000004.gdbtablx" />
+    <None Include="data\Time\ProjectData.gdb\a00000004.spx" />
+    <None Include="data\Time\ProjectData.gdb\a00000005.CatRelsByDestinationID.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000005.CatRelsByOriginID.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000005.CatRelsByType.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000005.FDO_UUID.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000005.gdbindexes" />
+    <None Include="data\Time\ProjectData.gdb\a00000005.gdbtable" />
+    <None Include="data\Time\ProjectData.gdb\a00000005.gdbtablx" />
+    <None Include="data\Time\ProjectData.gdb\a00000006.CatRelTypesByBackwardLabel.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000006.CatRelTypesByDestItemTypeID.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000006.CatRelTypesByForwardLabel.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000006.CatRelTypesByName.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000006.CatRelTypesByOriginItemTypeID.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000006.CatRelTypesByUUID.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000006.freelist" />
+    <None Include="data\Time\ProjectData.gdb\a00000006.gdbindexes" />
+    <None Include="data\Time\ProjectData.gdb\a00000006.gdbtable" />
+    <None Include="data\Time\ProjectData.gdb\a00000006.gdbtablx" />
+    <None Include="data\Time\ProjectData.gdb\a00000007.CatItemTypesByName.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000007.CatItemTypesByParentTypeID.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000007.CatItemTypesByUUID.atx" />
+    <None Include="data\Time\ProjectData.gdb\a00000007.freelist" />
+    <None Include="data\Time\ProjectData.gdb\a00000007.gdbindexes" />
+    <None Include="data\Time\ProjectData.gdb\a00000007.gdbtable" />
+    <None Include="data\Time\ProjectData.gdb\a00000007.gdbtablx" />
+    <None Include="data\Time\ProjectData.gdb\a00000009.gdbindexes" />
+    <None Include="data\Time\ProjectData.gdb\a00000009.gdbtable" />
+    <None Include="data\Time\ProjectData.gdb\a00000009.gdbtablx" />
+    <None Include="data\Time\ProjectData.gdb\a00000009.spx" />
+    <None Include="data\Time\ProjectData.gdb\gdb" />
+    <None Include="data\Time\ProjectData.gdb\timestamps" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000001.gdbindexes" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000001.gdbtable" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000001.gdbtablx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000001.TablesByName.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000002.gdbtable" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000002.gdbtablx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000003.gdbindexes" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000003.gdbtable" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000003.gdbtablx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000004.CatItemsByPhysicalName.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000004.CatItemsByType.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000004.FDO_UUID.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000004.freelist" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000004.gdbindexes" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000004.gdbtable" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000004.gdbtablx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000004.spx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000005.CatRelsByDestinationID.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000005.CatRelsByOriginID.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000005.CatRelsByType.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000005.FDO_UUID.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000005.gdbindexes" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000005.gdbtable" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000005.gdbtablx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000006.CatRelTypesByBackwardLabel.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000006.CatRelTypesByDestItemTypeID.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000006.CatRelTypesByForwardLabel.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000006.CatRelTypesByName.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000006.CatRelTypesByOriginItemTypeID.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000006.CatRelTypesByUUID.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000006.freelist" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000006.gdbindexes" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000006.gdbtable" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000006.gdbtablx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000007.CatItemTypesByName.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000007.CatItemTypesByParentTypeID.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000007.CatItemTypesByUUID.atx" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000007.freelist" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000007.gdbindexes" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000007.gdbtable" />
+    <None Include="data\Time\ProjectTempData.gdb\a00000007.gdbtablx" />
+    <None Include="data\Time\ProjectTempData.gdb\gdb" />
+    <None Include="data\Time\ProjectTempData.gdb\timestamps" />
+    <None Include="data\Time\ProjectTools.tbx" />
+    <None Include="data\Time\TimeAwareHurricanes.mxd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CmdAndTool\Navigation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\AirportsAndGolf\airportgolf.mxd.xml" />
+    <Content Include="data\AirportsAndGolf\validateinput.py" />
+    <Content Include="data\BloomfieldTownship\Hillshade.img.xml" />
+    <Content Include="data\BloomfieldTownship\RoadCenterline.shp.xml" />
+    <Content Include="data\BloomfieldTownship\RoadCenterline_Locator.loc.xml" />
+    <Content Include="data\BloomfieldTownship\SchoolTaxDistrict.shp.xml" />
+    <Content Include="data\BloomfieldTownship\SiteAddress.shp.xml" />
+    <Content Include="data\Time\BasicHurricanes.mxd.xml" />
+    <Content Include="data\Time\TimeAwareHurricanes.mxd.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
