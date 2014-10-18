@@ -34,34 +34,37 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SimpleArcObject.Demo.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.AxControls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
     <Reference Include="ESRI.ArcGIS.Carto, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Controls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Display, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Geometry, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.GlobeCore, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Output, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.System, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Version, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86" />
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -290,190 +293,558 @@
     <None Include="data\California\CaliforniaProjected.mxd" />
     <None Include="data\California\Report Templates\CA_Counties_Populations_Race.rlf" />
     <None Include="data\California\Report Templates\CA_Counties_Population_Change.rlf" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000001.freelist" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000001.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000001.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000001.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000001.TablesByName.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000002.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000002.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000003.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000003.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000003.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000026.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000026.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000026.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000026.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000029.freelist" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000029.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000029.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000029.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000029.LocatorsLocNameUnique_uc1.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002a.freelist" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002a.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002a.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002a.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002b.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002b.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002b.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002b.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002f.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002f.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002f.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000030.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000030.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000030.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000031.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000031.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000031.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000031.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000032.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000032.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000032.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000032.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000033.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000033.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000033.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000033.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000034.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000034.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000034.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000034.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000035.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000035.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000035.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000035.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000036.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000036.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000036.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000036.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000037.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000037.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000037.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000037.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000038.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000038.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000038.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000038.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000039.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000039.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000039.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000039.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003a.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003a.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003a.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003a.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003d.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003d.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003d.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003d.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003e.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003e.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003e.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003e.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003f.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003f.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003f.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003f.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000040.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000040.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000040.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000040.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000041.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000041.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000041.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000041.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000042.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000042.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000042.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000042.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.EdgeFCID.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.EdgeFID.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.Sequence.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.SignpostID.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000044.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000044.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000044.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.CatItemsByPhysicalName.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.CatItemsByType.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.FDO_UUID.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.freelist" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.CatItemTypesByName.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.CatItemTypesByParentTypeID.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.CatItemTypesByUUID.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.CatRelsByDestinationID.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.CatRelsByOriginID.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.CatRelsByType.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.FDO_UUID.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.freelist" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByBackwardLabel.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByDestItemTypeID.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByForwardLabel.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByName.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByOriginItemTypeID.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByUUID.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000049.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000049.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000049.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004a.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004a.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004a.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004a.N_1_Desc_0.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004a.N_1_Desc_1.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004b.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004b.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004b.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004b.N_1_Topology_0.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004c.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004c.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004c.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004c.N_1_JunctionWeight_0.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004d.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004d.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004d.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004d.N_1_EdgeWeight_0.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004e.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004e.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004e.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004e.N_1_TurnWeight_0.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004f.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004f.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004f.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004f.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000050.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000050.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000050.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000050.GDB_51_IsRetired.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000050.spx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.GDB_52_ClassID.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.GDB_52_OID.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.GDB_52_UpdateType.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000052.gdbindexes" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000052.gdbtable" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000052.gdbtablx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000052.SanFrancis2f9e64b9.atx" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\gdb" />
-    <None Include="data\SanFrancisco\SanFrancisco.gdb\timestamps" />
-    <None Include="data\SanFrancisco\SanFrancisco.mxd" />
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000001.freelist">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000001.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000001.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000001.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000001.TablesByName.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000002.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000002.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000003.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000003.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000003.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000026.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000026.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000026.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000026.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000029.freelist">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000029.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000029.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000029.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000029.LocatorsLocNameUnique_uc1.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002a.freelist">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002a.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002a.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002a.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002b.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002b.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002b.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002b.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002f.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002f.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000002f.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000030.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000030.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000030.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000031.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000031.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000031.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000031.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000032.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000032.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000032.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000032.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000033.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000033.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000033.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000033.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000034.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000034.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000034.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000034.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000035.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000035.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000035.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000035.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000036.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000036.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000036.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000036.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000037.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000037.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000037.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000037.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000038.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000038.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000038.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000038.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000039.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000039.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000039.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000039.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003a.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003a.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003a.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003a.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003d.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003d.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003d.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003d.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003e.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003e.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003e.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003e.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003f.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003f.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003f.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000003f.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000040.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000040.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000040.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000040.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000041.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000041.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000041.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000041.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000042.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000042.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000042.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000042.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.EdgeFCID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.EdgeFID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.Sequence.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000043.SignpostID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000044.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000044.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000044.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.CatItemsByPhysicalName.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.CatItemsByType.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.FDO_UUID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.freelist">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000045.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.CatItemTypesByName.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.CatItemTypesByParentTypeID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.CatItemTypesByUUID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000046.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.CatRelsByDestinationID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.CatRelsByOriginID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.CatRelsByType.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.FDO_UUID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.freelist">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000047.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByBackwardLabel.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByDestItemTypeID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByForwardLabel.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByName.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByOriginItemTypeID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.CatRelTypesByUUID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000048.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000049.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000049.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000049.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004a.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004a.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004a.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004a.N_1_Desc_0.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004a.N_1_Desc_1.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004b.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004b.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004b.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004b.N_1_Topology_0.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004c.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004c.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004c.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004c.N_1_JunctionWeight_0.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004d.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004d.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004d.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004d.N_1_EdgeWeight_0.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004e.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004e.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004e.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004e.N_1_TurnWeight_0.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004f.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004f.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004f.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a0000004f.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000050.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000050.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000050.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000050.GDB_51_IsRetired.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000050.spx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.GDB_52_ClassID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.GDB_52_OID.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000051.GDB_52_UpdateType.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000052.gdbindexes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000052.gdbtable">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000052.gdbtablx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\a00000052.SanFrancis2f9e64b9.atx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\gdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.gdb\timestamps">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SanFrancisco\SanFrancisco.mxd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="data\Time\BasicHurricanes.mxd" />
     <None Include="data\Time\ProjectData.gdb\a00000001.gdbindexes" />
     <None Include="data\Time\ProjectData.gdb\a00000001.gdbtable" />
