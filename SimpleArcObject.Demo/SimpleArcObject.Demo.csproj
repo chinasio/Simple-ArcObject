@@ -82,17 +82,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\FrmNavigation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmNavigation.Designer.cs">
-      <DependentUpon>FrmNavigation.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\FrmNavigation.resx">
-      <DependentUpon>FrmNavigation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -949,7 +940,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CmdAndTool\Navigation\" />
+    <Folder Include="Forms\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="data\AirportsAndGolf\airportgolf.mxd.xml" />
@@ -961,6 +952,12 @@
     <Content Include="data\BloomfieldTownship\SiteAddress.shp.xml" />
     <Content Include="data\Time\BasicHurricanes.mxd.xml" />
     <Content Include="data\Time\TimeAwareHurricanes.mxd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleArcObject\SimpleArcObject.csproj">
+      <Project>{9011887c-cc5e-4e9f-afef-35f14313e79c}</Project>
+      <Name>SimpleArcObject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

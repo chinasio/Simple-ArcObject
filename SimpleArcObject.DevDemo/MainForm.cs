@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
+using System.Linq;
 using System.Windows.Forms;
+using DevExpress.XtraBars;
 
-namespace SimpleArcObject.Demo.Forms
+namespace SimpleArcObject.DevDemo
 {
-    public partial class FrmNavigation : Form
+    public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public FrmNavigation()
+        public MainForm()
         {
             InitializeComponent();
         }
