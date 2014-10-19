@@ -17,7 +17,7 @@ Copyright 2014 Xiang Meng
    Last Modified On : 2014-10-19
 /************************************************************************/
 
-using SimpleArcObject.Framework.Manager;
+using SOA.Utils;
 using System;
 using System.IO;
 using System.Text;
