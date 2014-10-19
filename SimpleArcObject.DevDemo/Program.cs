@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimpleArcObject.Framework.Manager;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
@@ -13,9 +14,12 @@ namespace SimpleArcObject.DevDemo
         [STAThread]
         static void Main()
         {
+            ESRI.ArcGIS.RuntimeManager.Bind(ESRI.ArcGIS.ProductCode.EngineOrDesktop);
+            ILogger pLogger = LogManager.GetLogger("Main");
+            pLogger.Error("测试字符");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainForm());
         }
     }
 }

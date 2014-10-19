@@ -20,7 +20,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -117,6 +117,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleArcObject.DevHelper\SimpleArcObject.DevHelper.csproj">
+      <Project>{de11ef76-9f92-4edb-82be-4c55bc84e330}</Project>
+      <Name>SimpleArcObject.DevHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleArcObject.Framework\SimpleArcObject.Framework.csproj">
+      <Project>{a6b24fda-701e-41f2-af94-6e163e28eb8a}</Project>
+      <Name>SimpleArcObject.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleArcObject\SimpleArcObject.csproj">
+      <Project>{9011887c-cc5e-4e9f-afef-35f14313e79c}</Project>
+      <Name>SimpleArcObject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
