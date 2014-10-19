@@ -15,8 +15,6 @@ namespace SimpleArcObject.DevDemo
         static void Main()
         {
             ESRI.ArcGIS.RuntimeManager.Bind(ESRI.ArcGIS.ProductCode.EngineOrDesktop);
-            ILogger pLogger = LogManager.GetLogger("Main");
-            pLogger.Error("测试字符");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());

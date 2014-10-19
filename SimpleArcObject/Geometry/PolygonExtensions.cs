@@ -42,10 +42,10 @@ namespace SAO.Geometry
             {
                 return bSelfInt;
             }
-            var pTp = pPolygon as ITopologicalOperator4;
-            pTp.IsKnownSimple_2 = false;
+            var pTopo = pPolygon as ITopologicalOperator4;
+            pTopo.IsKnownSimple_2 = false;
             var eNonSimEnum = esriNonSimpleReasonEnum.esriNonSimpleOK;
-            if (!pTp.get_IsSimpleEx(out eNonSimEnum))
+            if (!pTopo.get_IsSimpleEx(out eNonSimEnum))
             {
                 if (eNonSimEnum == esriNonSimpleReasonEnum.esriNonSimpleSelfIntersections)
                 {

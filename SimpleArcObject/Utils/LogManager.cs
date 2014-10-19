@@ -23,7 +23,7 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace SimpleArcObject.Framework.Manager
+namespace SOA.Utils
 {
     /// <summary>
     /// 日志管理类
@@ -64,7 +64,7 @@ namespace SimpleArcObject.Framework.Manager
         /// <returns>ILogger.</returns>
         public static ILogger GetLogger(string name)
         {
-            return new SimpleArcObject.Framework.Manager.Logger(log4net.LogManager.GetLogger(name));
+            return new Logger(log4net.LogManager.GetLogger(name));
         }
     }
 
