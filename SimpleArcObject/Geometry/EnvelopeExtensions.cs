@@ -9,8 +9,8 @@ Copyright 2014 Xiang Meng
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-   Assembly         : SimpleArcObject
-   Author           : xiangmeng
+   Assembly         : SimpleArcObjec\
+ * Author           : xiangmeng
    Created          : 2014-10-10
   
    Last Modified By : xiangmeng
