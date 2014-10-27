@@ -18,6 +18,7 @@ Copyright 2014 Xiang Meng
 /************************************************************************/
 using ESRI.ArcGIS.Carto;
 using ESRI.ArcGIS.Controls;
+using SOA.Utils;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -25,6 +26,7 @@ namespace SAO.Control
 {
     public static class MapControlExtensions
     {
+        private static ILogger pLogger = LogManager.GetLogger("MapControlExtensions");
         #region 获取图层
 
         /// <summary>
@@ -115,7 +117,18 @@ namespace SAO.Control
             return mapControl.GetLayerIndex(layer.Name);
         }
         #endregion 获取图层
-
+        /// <summary>
+        /// 清除选择集
+        /// </summary>
+        /// <param name="mapControl"></param>
+        public static void ClearSelection(this AxMapControl mapControl)
+        {
+            mapControl.Map.ClearSelection();
+            var pActioveView = mapControl.Map as IActiveView;
+            if (pActioveView == null)
+                return;
+            pActioveView.PartialRefresh(esriViewDrawPhase.esriViewGeoSelection, null, pActioveView.Extent);
+        }
 
     }
 }

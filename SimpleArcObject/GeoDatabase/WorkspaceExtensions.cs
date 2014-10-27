@@ -1,5 +1,6 @@
 ﻿using ESRI.ArcGIS.DataSourcesRaster;
 using ESRI.ArcGIS.Geodatabase;
+using SOA.Utils;
 using System;
 using System.Collections.Generic;
 
@@ -7,6 +8,7 @@ namespace SAO.GeoDatabase
 {
     public static class WorkspaceExtensions
     {
+        private static ILogger pLogger = LogManager.GetLogger("WorkspaceExtensions");
         #region 获取工作空间中的对象
 
         /// <summary>
@@ -14,11 +16,11 @@ namespace SAO.GeoDatabase
         /// </summary>
         /// <param name="wks">工作空间</param>
         /// <param name="name">数据集或要素类或表名称</param>
-        /// <param name="dsType">数据集类型，不支持esriDTAny类型，如为esriDTAny,esriDTContainer,esriDTGeo类型强制返回false</param>
+        /// <param name="dsType">数据集类型</param>
         /// <returns>存在返回true，反之返回false</returns>
-        public static bool IsDatasetExists(this IWorkspace wks, string name, esriDatasetType dsType)
+        public static bool IsDatasetExists(this IWorkspace wks, string name, esriDatasetType dsType = esriDatasetType.esriDTAny)
         {
-            if (string.IsNullOrEmpty(name) || Convert.ToInt32(dsType) <= 3)
+            if (string.IsNullOrEmpty(name))
             {
                 return false;
             }
@@ -33,6 +35,7 @@ namespace SAO.GeoDatabase
             }
             catch (Exception ex)
             {
+                pLogger.Error(ex.Message);
                 return false;
             }
         }
@@ -57,6 +60,7 @@ namespace SAO.GeoDatabase
             }
             catch (System.Exception ex)
             {
+                pLogger.Error(ex.Message);
                 return null;
             }
         }
@@ -80,6 +84,7 @@ namespace SAO.GeoDatabase
             }
             catch (System.Exception ex)
             {
+                pLogger.Error(ex.Message);
                 return null;
             }
         }
@@ -103,6 +108,7 @@ namespace SAO.GeoDatabase
             }
             catch (System.Exception ex)
             {
+                pLogger.Error(ex.Message);
                 return null;
             }
         }
@@ -126,6 +132,7 @@ namespace SAO.GeoDatabase
             }
             catch (System.Exception ex)
             {
+                pLogger.Error(ex.Message);
                 return null;
             }
         }
@@ -149,6 +156,7 @@ namespace SAO.GeoDatabase
             }
             catch (System.Exception ex)
             {
+                pLogger.Error(ex.Message);
                 return null;
             }
         }
@@ -173,6 +181,7 @@ namespace SAO.GeoDatabase
             }
             catch (System.Exception ex)
             {
+                pLogger.Error(ex.Message);
                 return null;
             }
         }
