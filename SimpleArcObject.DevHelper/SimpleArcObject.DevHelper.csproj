@@ -43,6 +43,7 @@
     <Reference Include="DevExpress.Sparkline.v14.1.Core, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v14.1, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v14.1.UI, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v14.1, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v14.1, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v14.1.Extensions, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -77,6 +78,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\ConfigCode\Application.cs" />
+    <Compile Include="Config\ConfigCode\Application.Designer.cs">
+      <DependentUpon>Application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalVar.cs" />
     <Compile Include="DevCN\DevCN.cs" />
     <Compile Include="DevCN\GridControlCN.cs" />
     <Compile Include="DevCN\LocalizerCN.cs" />
@@ -98,8 +104,19 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Config\Config.xpo" />
+    <None Include="Config\Config.xpo.diagram">
+      <DependentUpon>Config.xpo</DependentUpon>
+    </None>
     <None Include="DevCN\Readme.md" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleArcObject\SimpleArcObject.csproj">
+      <Project>{9011887c-cc5e-4e9f-afef-35f14313e79c}</Project>
+      <Name>SimpleArcObject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

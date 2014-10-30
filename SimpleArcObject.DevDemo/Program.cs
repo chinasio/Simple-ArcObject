@@ -9,7 +9,7 @@ namespace SimpleArcObject.DevDemo
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// 应用程序的主入口点。
         /// </summary>
         [STAThread]
         static void Main()
@@ -28,8 +28,8 @@ namespace SimpleArcObject.DevDemo
             //汉化
             DevCN.Init();
 
-
-            Application.Run(new MainForm());
+            ConnectionHelper.Connect(AutoCreateOption.DatabaseAndSchema);
+            //Application.Run(new MainForm());
         }
     }
 }

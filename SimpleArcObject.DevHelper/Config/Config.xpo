@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="e2fabfa4-088d-4c75-a182-b36f6602e171" namespace="SAO.DevHelper.Config.Config" dataBaseShemaInfo="H4sIAAAAAAAEAMWVXW+bMBSG7yftP6Bc12CDMVARqi7pqqrbVDXttF0afJyi8iUMSfbvZwqlSdruQ6uWO5/nvEc+77FlhyebPDNWUKu0LKYTYuLJSfT+XfiBK1g0Zc2XcFHI0tCqQh1vVDqd3DVNdWxZ6/XaXDtmWS8tG2Niffv8aZHcQc5RWqiGFwlMxirx+6qJ3tUwwhseZ6C6LR/iR7IFHtEXnkN0WlVZmvBGNx9aT3hUnhUdi5q6hdAagjE5T1UHbivBG4gkz5QW7cJRe96m4kJEjufbLpMUydiniDLgKBAuRgILlsgAfMdzQ2sQj8WzMmvzQu2YeBXrROehT0bdMrS2wI7wV/b+1uK2TQoBuBwzZDuBjSjgBPksxijmhLDAAeY47JlNXW79g9MZr/pj/O9mvcB3E+Eh4uuTpNxjiLOYISlxnHAbxz5z3trs4j49gFPJwdaGEmTHFBC1eYIC7ggkQWLiSUyJ47210+/Aa3UAqz4DxxMEEUY9RLH0UeAEAWJEMDcgRNhx/MdWX6LDczOSIX6ShN3zCeKqLpMHaFg9/tq/tdEcVmebqgalzDlvuLki1CRHxpCedpHpmPjImLVZ09YwLaBtap4dGVdtrB+9S/hxU95DMY19XxDPpcLDGGjAQ+txi4f9ZhlXClR3ANftON3wVOjWQKaboa8eLVq5g64hL1ewL+zpvnamv4zotkjueLEEoWfWxf1oXuoh1JOpoG7SA/f2ShvhORRQ6+s1K/McikYNd/QZ3hHPQaVLvfyY6quwV7Gb03+stffJRj8BP13+SY0HAAA=" generateStoredProcedures="false" fieldNameCase="Unchanged" generateDefaultConstructors="false" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
+  <classes>
+    <dataBaseObjectModelHasClasses Id="706329af-25d8-4e40-9031-9961fe961dc6">
+      <xpObject Id="378256f4-fb84-46ea-9d50-d0d6cf9e8375" name="Application" baseClass="XPObject" userFileName="Application" designerFileName="Application.Designer" className="Application" virtualName="Application">
+        <fields>
+          <generalXpObjectHasFields Id="27ae7438-8ddd-484c-a45f-92280cf2252d">
+            <field Id="4e9e5a06-2392-4e0c-86b0-ba11693e6336" name="Name" displayName="名称" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a3e0a2f4-e7ca-419b-91a4-d06e6d5a8789">
+            <field Id="47985cd7-1850-4a76-a6b6-ff0bca20b863" name="Caption" displayName="标题" virtualColumnType="String" delayedUpdateModifiedOnly="false" isNullable="true" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="09510037-a249-4600-bcae-6b86cf5053fd">
+            <field Id="fae2a20c-2b4e-42ac-9a3d-fef017f04137" name="Skin" displayName="皮肤" virtualColumnType="String" delayedUpdateModifiedOnly="false" isNullable="true" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="5b7c9556-2679-40e7-9787-9704272e1a70">
+            <field Id="f86e37d1-1647-40f8-9399-61d65911d2bb" name="Years" displayName="版权年份" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <indexes>
+          <xpObjectHasIndexes Id="b989727a-8f48-4f94-92b0-621e71315762">
+            <index Id="86fab62f-0a91-411f-913b-cc170b07262b" name="Name" unique="true">
+              <fieldsInIndex>
+                <indexReferencesFields Id="c1da97a2-d69f-4316-99f2-3297134ea61b">
+                  <fieldMoniker Id="4e9e5a06-2392-4e0c-86b0-ba11693e6336" />
+                </indexReferencesFields>
+              </fieldsInIndex>
+            </index>
+          </xpObjectHasIndexes>
+        </indexes>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+  </classes>
+</dataBaseObjectModel>
