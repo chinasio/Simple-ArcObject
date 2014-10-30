@@ -95,7 +95,7 @@ namespace SAO.Control
         /// </summary>
         /// <param name="mapControl">The map control.</param>
         /// <param name="layerName">图层名称</param>
-        /// <returns>System.Int32.</returns>
+        /// <returns>如果找到，则返回index，未找到，则返回-1</returns>
         public static int GetLayerIndex(this AxMapControl mapControl, string layerName)
         {
             for (int i = 0; i < mapControl.LayerCount; i++)
@@ -111,7 +111,7 @@ namespace SAO.Control
         /// </summary>
         /// <param name="mapControl">The map control.</param>
         /// <param name="layer">图层</param>
-        /// <returns>System.Int32.</returns>
+        /// <returns>如果找到，则返回index，未找到，则返回-1</returns>
         public static int GetLayerIndex(this AxMapControl mapControl, ILayer layer)
         {
             return mapControl.GetLayerIndex(layer.Name);
